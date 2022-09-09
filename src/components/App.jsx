@@ -18,8 +18,8 @@ export const App = () => {
       avatar={user.avatar}
       stats={user.stats}
       />
-      <Statistics />
-      <FriendsList/>
+      <Statistics stats={data}/>
+      <FriendsList friends={friends}/>
       <TransactionHistory items={transactions}/>
     </>
   );
