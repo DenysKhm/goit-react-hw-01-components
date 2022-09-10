@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 
-export default function FriendsListItem({ avatar, name, isOnline }) {
+export default function FriendListItem({ avatar, name, isOnline }) {
   return (
     <>
-      <span class="status">{isOnline}</span>
-      <img class="avatar" src={avatar} alt="User avatar" width="48" />
-      <p class="name">{name}</p>
+      <span  style={{ backgroundColor: isOnline ? 'green' : 'red' }}>{isOnline}</span>
+      <img className={avatar} src={avatar} alt="User avatar" width="48" />
+      <p className={name}>{name}</p>
     </>
   );
 }
 
-FriendsListItem.propTypes = {
+FriendListItem.propTypes = {
   isOnline: PropTypes.bool,
   avatar: PropTypes.string,
   name: PropTypes.string,
